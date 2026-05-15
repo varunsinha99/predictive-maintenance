@@ -1,23 +1,37 @@
-# Smart Predictive Maintenance System
+# 🚀 Smart Predictive Maintenance System (SPMS)
+**Project ID:** BTP2CSE145 | **Specialization:** Cloud Computing
 
-## What is this?
-I built this for my B.Tech minor project. The core idea is simple: instead of waiting for manufacturing equipment to break down, this system analyzes sensor data (like pressure, temperature, and vibration) to predict machine failures *before* they happen. 
+### 🛠 The Problem
+In manufacturing, equipment failure leads to massive downtime and financial loss. Most companies follow "Reactive Maintenance" (fix it when it breaks). This project shifts the paradigm to **"Predictive Maintenance"**—using Machine Learning to predict failures before they happen.
 
-## How it works
-I kept the architecture straightforward. It's a machine learning pipeline broken down into three main parts:
-1. **Data & Training:** `generate_and_train.py` creates the synthetic industrial dataset and trains the ML model.
-2. **The Brain:** The trained model and data scaler are saved as `model.pkl` and `scaler.pkl`.
-3. **The Application:** `app.py` serves the model, taking live machine parameters as input and returning a prediction.
+---
 
-## Tech Stack
-* **Language:** Python
-* **Machine Learning:** Scikit-Learn, Pandas, NumPy
-* **Backend:** [Flask / Streamlit - *Edit this based on what app.py uses*]
+## 🏗 Project Architecture
+This isn't just a Python script. It's a production-ready application containerized for the cloud.
 
-## Run it on your machine
-Want to test it out locally?
 
-1. Clone this repository:
+
+- **Data Processing:** Scaled and cleaned sensor data (Air temperature, Process temperature, Rotational speed, Torque, Tool wear).
+- **Machine Learning:** Trained a predictive model to classify failure risks.
+- **Frontend:** Interactive dashboard built with **Streamlit**.
+- **DevOps:** Fully containerized using **Docker** for "Build Once, Run Anywhere" capability.
+
+---
+
+## ⚡ Tech Stack
+- **Languages:** Python 3.9
+- **Libraries:** Scikit-learn, Pandas, NumPy, Streamlit
+- **DevOps/Cloud:** Docker, Docker Hub, AWS EC2
+- **Tools:** Git, VS Code
+
+---
+
+## 🐳 Dockerization (Cloud Ready)
+This project is officially containerized. You don't need to install Python or any libraries locally—just run it via Docker.
+
+**Public Image:** `varunsinha2112/spms-app`
+
+### Quick Start with Docker:
+1. **Pull the image from Docker Hub:**
    ```bash
-   git clone [https://github.com/varunsinha99/predictive-maintenance.git](https://github.com/varunsinha99/predictive-maintenance.git)
-   cd predictive-maintenance
+   docker pull varunsinha2112/spms-app
